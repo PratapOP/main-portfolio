@@ -1,0 +1,74 @@
+/* =========================================
+   NETFLIX ORIGINAL PORTFOLIO — ANIMATIONS
+   Phase 1: Motion & Interaction Standards
+========================================= */
+
+/* -------- FADE IN -------- */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn var(--transition-medium) forwards;
+}
+
+.fade-in,
+.slide-up {
+    animation-play-state: paused;
+}
+
+.revealed {
+    animation-play-state: running;
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* -------- SLIDE UP -------- */
+.slide-up {
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slideUp var(--transition-medium) forwards;
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* -------- NETFLIX CARD HOVER -------- */
+.netflix-card {
+    transition: transform var(--transition-fast),
+                box-shadow var(--transition-fast);
+}
+
+.netflix-card:hover {
+    transform: scale(1.08);
+    box-shadow: var(--shadow-soft);
+    z-index: 5;
+}
+
+/* -------- BUTTON HOVER -------- */
+.netflix-btn {
+    transition: transform var(--transition-fast),
+                background-color var(--transition-fast);
+}
+
+.netflix-btn:hover {
+    transform: scale(1.05);
+}
+
+/* -------- SMOOTH SCROLL -------- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== ALWAYS SHOW HERO CONTENT ===== */
+.hero .fade-in,
+.hero .slide-up {
+    animation-play-state: running !important;
+    opacity: 1 !important;
+}

@@ -1,0 +1,73 @@
+/* =========================================
+   NETFLIX ORIGINAL PORTFOLIO — TYPOGRAPHY
+   Phase 1: Typography Hierarchy & Rhythm
+========================================= */
+
+/* -------- SECTION TITLES -------- */
+.section-title {
+    font-size: var(--fs-title-lg);
+    font-weight: 700;
+    margin-bottom: var(--space-md);
+    letter-spacing: -0.4px;
+}
+
+/* Netflix-style subtle underline */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--netflix-red);
+    margin-top: 0.5rem;
+}
+
+/* -------- HERO TITLE -------- */
+.hero-title {
+    font-size: var(--fs-title-xl);
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+/* Netflix Original Badge */
+.hero-badge {
+    font-size: var(--fs-small);
+    letter-spacing: 2px;
+    color: var(--netflix-red);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+/* -------- SUBHEADINGS -------- */
+.subheading {
+    font-size: var(--fs-title-md);
+    font-weight: 600;
+    color: var(--netflix-light-gray);
+    margin-bottom: var(--space-sm);
+}
+
+body.light-mode .subheading {
+    color: #444444;
+}
+
+/* -------- BODY TEXT -------- */
+.text-muted {
+    color: var(--netflix-light-gray);
+    font-size: var(--fs-body);
+}
+
+/* -------- NETFLIX ROW HEADING -------- */
+.row-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* -------- CONTENT SPACING -------- */
+.section {
+    padding: var(--space-lg) var(--space-md);
+}
+
+.section-tight {
+    padding: var(--space-md);
+}

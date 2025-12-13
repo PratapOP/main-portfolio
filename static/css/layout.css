@@ -1,0 +1,60 @@
+/* =========================================
+   NETFLIX ORIGINAL PORTFOLIO — LAYOUT SYSTEM
+   Phase 2: Global Layout & Structure
+========================================= */
+
+/* -------- PAGE WRAPPER -------- */
+.page-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+/* -------- SECTION BASE -------- */
+.section {
+    padding: var(--space-lg) 0;
+}
+
+/* -------- HERO SECTION -------- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7),
+        rgba(20, 20, 20, 1)
+    );
+}
+
+/* -------- NETFLIX ROW -------- */
+.netflix-row {
+    margin-bottom: var(--space-lg);
+}
+
+.netflix-row-content {
+    display: flex;
+    gap: 1.2rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+
+/* Hide scrollbar (Netflix-style) */
+.netflix-row-content::-webkit-scrollbar {
+    display: none;
+}
+
+/* -------- CENTER UTIL -------- */
+.center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* -------- GRID (EXPERIENCE / PROJECTS) -------- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}

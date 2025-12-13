@@ -1,0 +1,65 @@
+/* =========================================
+   NETFLIX ORIGINAL PORTFOLIO — RESPONSIVE
+   Phase 2: Mobile & Tablet Optimization
+========================================= */
+
+/* -------- TABLET (≤1024px) -------- */
+@media (max-width: 1024px) {
+
+    .hero-title {
+        font-size: 2.6rem;
+    }
+
+    .page-container {
+        padding: 0 var(--space-sm);
+    }
+
+    .netflix-row-content {
+        gap: 1rem;
+    }
+}
+
+/* -------- MOBILE (≤768px) -------- */
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 85vh;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .section {
+        padding: var(--space-md) 0;
+    }
+
+    .netflix-row-content {
+        overflow-x: scroll;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-icon {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* -------- SMALL MOBILE (≤480px) -------- */
+@media (max-width: 480px) {
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .netflix-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,113 @@
+/* =========================================
+   NETFLIX ORIGINAL PORTFOLIO — COMPONENTS
+   Phase 2: Reusable UI Blocks
+========================================= */
+
+/* -------- CARD BASE -------- */
+.card {
+    background-color: var(--netflix-dark-gray);
+    padding: var(--space-md);
+    border-radius: 6px;
+    transition: transform var(--transition-fast),
+                box-shadow var(--transition-fast);
+}
+
+/* Card hover inherits animation rules */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-soft);
+}
+
+/* Light mode card */
+body.light-mode .card {
+    background-color: var(--light-card);
+}
+
+/* -------- SKILL TAG -------- */
+.skill-tag {
+    display: inline-block;
+    background-color: rgba(229, 9, 20, 0.15);
+    color: var(--netflix-red);
+    padding: 0.3rem 0.75rem;
+    font-size: var(--fs-small);
+    border-radius: 20px;
+    margin: 0.3rem 0.3rem 0 0;
+}
+
+/* -------- PROJECT BADGE -------- */
+.project-badge {
+    font-size: var(--fs-small);
+    background-color: #2a2a2a;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    margin-right: 0.4rem;
+}
+
+body.light-mode .project-badge {
+    background-color: #eaeaea;
+}
+
+/* -------- SOCIAL ICON -------- */
+.social-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #222;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.75rem;
+    transition: transform var(--transition-fast),
+                background-color var(--transition-fast);
+}
+
+.social-icon:hover {
+    transform: scale(1.15);
+    background-color: var(--netflix-red);
+}
+
+/* -------- EXPERIENCE ITEM -------- */
+.experience-item {
+    border-left: 3px solid var(--netflix-red);
+    padding-left: 1rem;
+}
+
+/* -------- CONTACT FORM -------- */
+.form-input {
+    width: 100%;
+    background-color: #222;
+    border: none;
+    padding: 0.75rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+body.light-mode .form-input {
+    background-color: #f0f0f0;
+    color: #111;
+}
+/* =========================================
+   NETFLIX PREMIUM HOVER POLISH
+========================================= */
+
+/* Card cinematic glow */
+.card:hover {
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.6),
+        0 0 20px rgba(229, 9, 20, 0.35);
+}
+
+/* Netflix row depth */
+.netflix-row-content:hover .card {
+    opacity: 0.5;
+}
+
+.netflix-row-content .card:hover {
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+/* CTA button glow */
+.netflix-btn:hover {
+    box-shadow: 0 0 18px rgba(229, 9, 20, 0.6);
+}
