@@ -1,6 +1,6 @@
-# 🎬 Professional Portfolio Website (Flask + MySQL)
+# Professional Portfolio Website (Flask + MySQL)
 
-A **modern, Netflix-inspired professional portfolio website** built using **Flask**, **MySQL**, and clean frontend technologies.  
+A **modern Professional portfolio website** built using **Flask**, **MySQL**, and clean frontend technologies.  
 Designed to showcase skills, experience, and projects in a **cinematic, minimal, and recruiter-friendly format**.
 
 🌐 **Live Website:**  
