@@ -1,0 +1,282 @@
+/**
+ * ============================================================
+ * sections.jsx — Curated Content Sections
+ * ============================================================
+ */
+
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  sectionFade,
+  staggerContainer,
+  cardFade
+} from "./motion";
+
+/* ============================================================
+   HERO — FEATURED
+   ============================================================ */
+
+export function HeroSection() {
+  return (
+    <motion.section
+      className="section hero"
+      variants={sectionFade}
+      initial="hidden"
+      animate="visible"
+    >
+      <div className="hero-inner">
+        <h1 className="hero-title">Abhiuday Pratap Singh</h1>
+        <p className="hero-subtitle">
+          Building full-stack systems where data, responsibility,
+          and real-world impact intersect.
+        </p>
+      </div>
+    </motion.section>
+  );
+}
+
+/* ============================================================
+   ABOUT — POSITIONING
+   ============================================================ */
+
+export function AboutSection() {
+  return (
+    <motion.section
+      className="section"
+      variants={sectionFade}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
+      <div className="section-inner">
+        <p className="section-text">
+          Information Technology undergraduate at Jaypee University
+          of Information Technology, focused on building production-grade
+          systems that combine engineering, analytics, and decision-making.
+          Experience spans full-stack development, financial coordination,
+          and responsible data systems.
+        </p>
+      </div>
+    </motion.section>
+  );
+}
+
+/* ============================================================
+   SKILLS — CAPABILITIES
+   ============================================================ */
+
+export function SkillsSection() {
+  const skills = [
+    {
+      title: "Engineering",
+      text:
+        "React, Next.js, TypeScript, Python, Flask, PostgreSQL, MySQL, system design, API development"
+    },
+    {
+      title: "Data & Analysis",
+      text:
+        "Machine learning, explainable models, data analysis, visualization, scikit-learn"
+    },
+    {
+      title: "Leadership & Execution",
+      text:
+        "Financial planning, sponsorship management, stakeholder communication, presentations"
+    }
+  ];
+
+  return (
+    <motion.section
+      className="section"
+      variants={sectionFade}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
+      <motion.div
+        className="row"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        {skills.map((item, index) => (
+          <motion.div className="card" variants={cardFade} key={index}>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </motion.div>
+        ))}
+      </motion.div>
+    </motion.section>
+  );
+}
+
+/* ============================================================
+   EXPERIENCE — ROLES
+   ============================================================ */
+
+export function ExperienceSection() {
+  const roles = [
+    {
+      title: "Finance Committee Head Coordinator",
+      text:
+        "Led sponsorship strategy and budgeting for large-scale university events, working with national brands and managing financial execution end-to-end."
+    },
+    {
+      title: "Full Stack Developer Intern",
+      text:
+        "Built and maintained production web applications using modern frontend and backend stacks, while supporting project coordination and sponsor outreach."
+    },
+    {
+      title: "Management Trainee",
+      text:
+        "Contributed to event planning, client servicing, vendor coordination, and live project execution in fast-moving environments."
+    }
+  ];
+
+  return (
+    <motion.section
+      className="section"
+      variants={sectionFade}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
+      <motion.div
+        className="row"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        {roles.map((item, index) => (
+          <motion.div className="card" variants={cardFade} key={index}>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </motion.div>
+        ))}
+      </motion.div>
+    </motion.section>
+  );
+}
+
+/* ============================================================
+   PROJECTS — FEATURED TITLES
+   ============================================================ */
+
+export function ProjectsSection() {
+  const projects = [
+    {
+      title: "AlgoVerse",
+      text:
+        "An interactive algorithm and data structure visualizer designed to shift learning from memorization to true understanding."
+    },
+    {
+      title: "Employee Stress Analytics",
+      text:
+        "A machine-learning powered system that predicts stress levels, explains contributing factors, and delivers actionable insights."
+    },
+    {
+      title: "Smart Workplace Analytics",
+      text:
+        "A consent-first analytics platform focused on ethical data usage and explainable insights for workplace wellbeing."
+    }
+  ];
+
+  return (
+    <motion.section
+      className="section"
+      variants={sectionFade}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
+      <motion.div
+        className="row"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        {projects.map((item, index) => (
+          <motion.div className="card" variants={cardFade} key={index}>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </motion.div>
+        ))}
+      </motion.div>
+    </motion.section>
+  );
+}
+
+/* ============================================================
+   TRENDING — CURRENT FOCUS
+   ============================================================ */
+
+export function TrendingSection() {
+  return (
+    <motion.section
+      className="section"
+      variants={sectionFade}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
+      <div className="section-inner">
+        <p className="section-text">
+          Currently focused on building responsible analytics systems that
+          balance insight with ethics, emphasizing explainable machine learning,
+          consent-first data practices, and real-world applicability.
+        </p>
+      </div>
+    </motion.section>
+  );
+}
+
+/* ============================================================
+   WHY HIRE — POSITIONING
+   ============================================================ */
+
+export function WhyHireMeSection() {
+  return (
+    <motion.section
+      className="section"
+      variants={sectionFade}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
+      <div className="section-inner">
+        <p className="section-text">
+          I approach systems as products, not demos. My work prioritizes clarity,
+          responsibility, and scalability, with the ability to own ideas from
+          concept through deployment.
+        </p>
+      </div>
+    </motion.section>
+  );
+}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+
+export function ContactSection() {
+  return (
+    <motion.section
+      className="section contact"
+      variants={sectionFade}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
+      <div className="section-inner">
+        <form className="contact-form">
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="Email" />
+          <textarea placeholder="Message" rows="4" />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </motion.section>
+  );
+}

@@ -100,7 +100,7 @@
         {
         title: "Leadership & Execution",
         text:
-            "Financial planning, Sponsorship management, Stakeholder communication, Presentations, Budgeting"
+            "Financial planning, Sponsorship management, stakeholder communication, presentations"
         }
     ];
 

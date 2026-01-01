@@ -85,7 +85,7 @@
         {
         title: "Languages & Frameworks",
         text:
-            "Python, JavaScript, C++, Java, SQL, HTML, CSS, C#"
+            "Python, JavaScript, C++, Java, SQL, HTML, CSS, c#"
         },
         {
         title: "Engineering",
@@ -100,7 +100,7 @@
         {
         title: "Leadership & Execution",
         text:
-            "Financial planning, Sponsorship management, Stakeholder communication, Presentations, Budgeting"
+            "Financial planning, sponsorship management, stakeholder communication, presentations"
         }
     ];
 

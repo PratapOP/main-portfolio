@@ -83,14 +83,9 @@
     export function SkillsSection() {
     const skills = [
         {
-        title: "Languages & Frameworks",
-        text:
-            "Python, JavaScript, C++, Java, SQL, HTML, CSS, C#"
-        },
-        {
         title: "Engineering",
         text:
-            "React, Next.js, TypeScript, Flask, PostgreSQL, MySQL, system design, API development"
+            "React, Next.js, TypeScript, Python, Flask, PostgreSQL, MySQL, system design, API development"
         },
         {
         title: "Data & Analysis",
@@ -100,7 +95,7 @@
         {
         title: "Leadership & Execution",
         text:
-            "Financial planning, Sponsorship management, Stakeholder communication, Presentations, Budgeting"
+            "Financial planning, sponsorship management, stakeholder communication, presentations"
         }
     ];
 

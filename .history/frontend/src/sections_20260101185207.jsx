@@ -51,25 +51,12 @@
         <div className="section-inner">
             <h2 className="section-title">Positioning</h2>
             <p className="section-text">
-            Currently doing Bachelors in Information Technology at Jaypee University
-            of Information Technology
-            <br/><br/>
-            Fully focused on building production-grade
+            Information Technology undergraduate at Jaypee University
+            of Information Technology, focused on building production-grade
             systems that combine engineering, analytics, and decision-making.
+            <br/>
             Experience spans full-stack development, financial coordination,
             and responsible data systems.I'm passionate about solving real problems through thoughtful engineering and data-driven decision-making.
-            <br/><br/>
-            Currently exploring the intersection of machine learning, ethics, and user-centric design to create impactful solutions.
-            To me, technology is a tool to empower individuals and organizations alike.
-            Everything I build is driven by a commitment to clarity, responsibility, and scalability.
-            <br/><br/>
-            To find out more, feel free to reach out!
-            <br/>
-            Mail: <a href="mailto:abhiuday17@gmail.com">abhiuday17@gmail.com</a>
-            <br/>
-            LinkedIn: <a href="https://www.linkedin.com/in/abhiuday-pratap-singh-818180287/">https://www.linkedin.com/in/abhiuday17/</a>
-            <br/>
-            GitHub: <a href="https://github.com/PratapOP">https://github.com/PratapOP</a>
             </p>
         </div>
         </motion.section>
@@ -83,14 +70,9 @@
     export function SkillsSection() {
     const skills = [
         {
-        title: "Languages & Frameworks",
-        text:
-            "Python, JavaScript, C++, Java, SQL, HTML, CSS, C#"
-        },
-        {
         title: "Engineering",
         text:
-            "React, Next.js, TypeScript, Flask, PostgreSQL, MySQL, system design, API development"
+            "React, Next.js, TypeScript, Python, Flask, PostgreSQL, MySQL, system design, API development"
         },
         {
         title: "Data & Analysis",
@@ -100,7 +82,7 @@
         {
         title: "Leadership & Execution",
         text:
-            "Financial planning, Sponsorship management, Stakeholder communication, Presentations, Budgeting"
+            "Financial planning, sponsorship management, stakeholder communication, presentations"
         }
     ];
 

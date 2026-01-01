@@ -90,7 +90,10 @@
         {
         title: "Engineering",
         text:
-            "React, Next.js, TypeScript, Flask, PostgreSQL, MySQL, system design, API development"
+        <ul><li>React</li></ul>
+        <ul><li>Node.js</li></ul>
+        
+            
         },
         {
         title: "Data & Analysis",
