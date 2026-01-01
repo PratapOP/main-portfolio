@@ -1,0 +1,186 @@
+/* ============================================================
+   GLOBAL RESET & BASE THEME
+   ============================================================ */
+
+/* Basic reset to remove browser inconsistencies */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root-level variables for consistent theming */
+:root {
+  --bg-dark: #0b0b0b;
+  --bg-card: #151515;
+  --text-primary: #f5f5f5;
+  --text-secondary: #b3b3b3;
+  --accent: #e5e5e5;
+
+  /* Spacing scale */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 64px;
+  --space-xxl: 96px;
+}
+
+/* ============================================================
+   BODY & ROOT CONTAINER
+   ============================================================ */
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* Main application wrapper */
+.app-root {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   SECTION STRUCTURE
+   ============================================================ */
+
+/*
+ Each section acts as a cinematic frame.
+ Vertical spacing is intentional and generous.
+*/
+.section {
+  padding: var(--space-xxl) var(--space-xl);
+}
+
+/* Inner container keeps content readable on large screens */
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Text blocks used for narrative sections */
+.section-text {
+  max-width: 800px;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-inner {
+  text-align: left;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-md);
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+/* ============================================================
+   ROWS & CARDS (Streaming-style layout)
+   ============================================================ */
+
+/*
+ Horizontal row that mimics streaming platforms.
+ Cards scroll naturally within available space.
+*/
+.row {
+  display: flex;
+  gap: var(--space-lg);
+  overflow-x: auto;
+  padding-bottom: var(--space-sm);
+}
+
+/* Hide scrollbar without disabling scroll */
+.row::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  background-color: var(--bg-card);
+  padding: var(--space-lg);
+  min-width: 260px;
+  border-radius: 6px;
+
+  /* Transition kept subtle and premium */
+  transition: transform 0.35s ease, background-color 0.35s ease;
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin-bottom: var(--space-sm);
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* Hover zoom effect */
+.card:hover {
+  transform: scale(1.05);
+  background-color: #1c1c1c;
+}
+
+/* ============================================================
+   CONTACT FORM
+   ============================================================ */
+
+.contact {
+  padding-bottom: var(--space-xxl);
+}
+
+.contact-form {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #111;
+  border: 1px solid #222;
+  color: var(--text-primary);
+  padding: var(--space-sm);
+  font-size: 0.95rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.contact-form button {
+  background-color: var(--text-primary);
+  color: #000;
+  border: none;
+  padding: var(--space-sm);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: opacity 0.25s ease;
+}
+
+.contact-form button:hover {
+  opacity: 0.85;
+}

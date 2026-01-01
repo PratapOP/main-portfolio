@@ -246,64 +246,10 @@
     }
 
     /* ============================================================
-   CONTACT / HIRE ME SECTION — API WIRED
-   ============================================================ */
+    CONTACT / HIRE ME SECTION
+    ============================================================ */
 
     export function ContactSection() {
-    const [formData, setFormData] = React.useState({
-        name: "",
-        email: "",
-        message: ""
-    });
-
-    const [status, setStatus] = React.useState("idle"); // idle | sending | success | error
-
-    /**
-     * Handle controlled input changes.
-     * Keeps form state predictable and debuggable.
-     */
-    function handleChange(e) {
-        setFormData({
-        ...formData,
-        [e.target.name]: e.target.value
-        });
-    }
-
-    /**
-     * Submit form data to the Flask backend.
-     * Uses explicit error handling and avoids silent failures.
-     */
-    async function handleSubmit(e) {
-        e.preventDefault();
-
-        // Basic frontend validation
-        if (!formData.name || !formData.email || !formData.message) {
-        setStatus("error");
-        return;
-        }
-
-        setStatus("sending");
-
-        try {
-        const response = await fetch("http://localhost:5000/contact", {
-            method: "POST",
-            headers: {
-            "Content-Type": "application/json"
-            },
-            body: JSON.stringify(formData)
-        });
-
-        if (!response.ok) {
-            throw new Error("Request failed");
-        }
-
-        setStatus("success");
-        setFormData({ name: "", email: "", message: "" });
-        } catch (error) {
-        setStatus("error");
-        }
-    }
-
     return (
         <motion.section
         className="section contact"
@@ -313,48 +259,13 @@
         viewport={{ once: true }}
         >
         <div className="section-inner">
-            <form className="contact-form" onSubmit={handleSubmit}>
-            <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                value={formData.name}
-                onChange={handleChange}
-            />
-
-            <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={handleChange}
-            />
-
-            <textarea
-                name="message"
-                placeholder="Message"
-                rows="4"
-                value={formData.message}
-                onChange={handleChange}
-            />
-
-            <button type="submit" disabled={status === "sending"}>
-                {status === "sending" ? "Sending..." : "Send"}
-            </button>
-
-            {/* Minimal, non-intrusive feedback */}
-            {status === "success" && (
-                <p className="form-feedback success">Message sent successfully.</p>
-            )}
-
-            {status === "error" && (
-                <p className="form-feedback error">
-                Something went wrong. Please try again.
-                </p>
-            )}
+            <form className="contact-form">
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <textarea placeholder="Message" rows="4"></textarea>
+            <button type="submit">Send</button>
             </form>
         </div>
         </motion.section>
     );
     }
-
